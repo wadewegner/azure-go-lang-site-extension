@@ -1,15 +1,17 @@
 <?xml version="1.0"?> 
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"> 
-    <system.webServer> 
-        <handlers>
-            <add name="httpplatformhandler" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified" />
-        </handlers>
-        <httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe" 
-                      arguments="run d:\home\site\wwwroot\server.go" 
-                      startupTimeLimit="60">
-            <environmentVariables>
-              <environmentVariable name="GOROOT" value="d:\home\site\wwwroot\go" />
-            </environmentVariables>
-        </httpPlatform>
-    </system.webServer> 
-</configuration> 
+    <location path="%XDT_SITENAME%" xdt:Locator="Match(path)">
+        <system.webServer>
+            <handlers>
+                <add name="httpplatformhandler" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified" xdt:Transform="Insert" />
+            </handlers>
+            <httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe"
+                          arguments="run d:\home\site\wwwroot\server.go"
+                          startupTimeLimit="60" xdt:Transform="InsertIfMissing">
+                <environmentVariables>
+                  <environmentVariable name="GOROOT" value="d:\home\site\wwwroot\go" xdt:Transform="InsertIfMissing"/>
+                </environmentVariables>
+            </httpPlatform>
+        </system.webServer>
+    </location>
+</configuration>

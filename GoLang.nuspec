@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>golang</id>
+    <title>Go Lang for Azure Websites</title>
+    <version>0.0.6</version>
+    <authors>wadewegner</authors>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <projectUrl>https://github.com/wadewegner/azure-go-lang-site-extension</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An easy way to setup your Azure Website to run Go Language</description>
+    <tags>go golang language</tags>
+  </metadata>
+  <files>
+    <file src="go-lang\*.*" target="content" />
+  </files>
+</package>

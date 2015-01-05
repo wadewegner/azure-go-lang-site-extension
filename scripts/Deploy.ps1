@@ -1,9 +1,9 @@
 Switch-AzureMode -Name AzureResourceManager
 
-$subName = "Microsoft FTE"
-$userName = "wade@wadewegnergmail.onmicrosoft.com"
-$securePassword = ConvertTo-SecureString -String "PASSWORD" -AsPlainText -Force
-$name = "WadeTest9"
+$subName = "YOURSUBSCRIPTIONNAME"
+$userName = "YOURORGIDUSERNAME"
+$securePassword = ConvertTo-SecureString -String "YOURPASSWORD" -AsPlainText -Force
+$name = "YOURRESOURCEGROUPNAME"
 $location = "West US"
 $templateFile = "Template.json"
 $siteName = $name + "Site"

@@ -3,15 +3,15 @@
   <metadata>
     <id>golang</id>
     <title>Go Lang for Azure Websites</title>
-    <version>0.0.15</version>
+    <version>0.0.16</version>
     <authors>wadewegner</authors>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <projectUrl>https://github.com/wadewegner/azure-go-lang-site-extension</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>An easy way to setup your Azure Website to run Go Language</description>
+    <description>An easy way to setup your Azure Website to run the Go language</description>
     <tags>go golang language</tags>
   </metadata>
   <files>
-    <file src="go-lang\*.*" target="content" />
+    <file src="golang\*.*" target="content" />
   </files>
 </package>

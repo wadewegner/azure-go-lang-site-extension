@@ -5,11 +5,12 @@
       <handlers xdt:Transform="InsertIfMissing">
         <add name="httpplatformhandler" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified" xdt:Transform="InsertIfMissing" />
       </handlers>
-      <httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe"
-                    arguments="run d:\home\site\wwwroot\server.go"
+      <httpPlatform processPath="%HOME%\site\wwwroot\go\bin\go.exe"
+                    arguments="run %HOME%\site\wwwroot\app.go"
                     startupTimeLimit="60" xdt:Transform="InsertIfMissing">
         <environmentVariables>
-          <environmentVariable name="GOROOT" value="d:\home\site\wwwroot\go" xdt:Transform="InsertIfMissing"/>
+          <environmentVariable name="GOROOT" value="%HOME%\site\wwwroot\go" xdt:Transform="InsertIfMissing"/>
+          <environmentVariable name="GOPATH" value="%HOME%\site\wwwroot\gopath" xdt:Transform="InsertIfMissing"/>
         </environmentVariables>
       </httpPlatform>
     </system.webServer>

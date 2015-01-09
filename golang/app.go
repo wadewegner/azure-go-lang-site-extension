@@ -1,16 +1,22 @@
 package main
-
 import (
-    "fmt"
+    "io"
     "net/http"
     "os" 
 )
-
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "You just browsed page (if blank you're at the root): %s", r.URL.Path[1:])
+    w.Header().Set("Content-type", "text/html")
+    io.WriteString(w, `
+        Congratulations! You're running Go in Azure Websites!
+        <p>
+        Next steps? See <a href=""http://www.wadewegner.com""> http://www.wadewegner.com</a> for more details!`)
 }
-
 func main() {
+    port := os.Getenv("HTTP_PLATFORM_PORT")
+    if port == "" {
+      port = "3000"
+    }
+
     http.HandleFunc("/", handler)
-    http.ListenAndServe(":"+os.Getenv("HTTP_PLATFORM_PORT"), nil)
+    http.ListenAndServe(":" + port, nil)
 }

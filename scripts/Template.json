@@ -57,7 +57,8 @@
       ],
       "properties": {
         "name": "[variables('goSite')]",
-        "webHostingPlan": "[parameters('hostingPlanName')]"
+        "webHostingPlan": "[parameters('hostingPlanName')]",
+        "scmType": "LocalGit"
       },
       "resources": [
         {

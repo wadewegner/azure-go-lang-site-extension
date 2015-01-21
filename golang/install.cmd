@@ -1,4 +1,4 @@
-IF NOT EXIST "%WEBROOT_PATH%server.go" (
+IF NOT EXIST "%WEBROOT_PATH%app.go" (
 	cp app.go %WEBROOT_PATH%
 )
 

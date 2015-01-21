@@ -58,7 +58,6 @@
       "properties": {
         "name": "[variables('goSite')]",
         "webHostingPlan": "[parameters('hostingPlanName')]",
-        "scmType": "LocalGit"
       },
       "resources": [
         {
@@ -69,6 +68,7 @@
             "[resourceId('Microsoft.Web/Sites', variables('goSite'))]"
           ],
           "properties": {
+            "scmType": "LocalGit",
             "appSettings": [
               { "Name": "SCM_SITEEXTENSIONS_FEED_URL", "Value": "http://www.siteextensions.net/api/v2/" },
             ]
